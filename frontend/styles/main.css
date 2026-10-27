@@ -131,3 +131,29 @@
     width: 100px;
     height: 100px;
 }
+
+/* Gemeinsame Größe für Logo und Social-Icons im Footer */
+[data-layout="footer"] {
+    --footer-image-height: 40px;
+}
+
+[data-layout="footer"] .logo,
+[data-layout="footer"] .socials img {
+    height: var(--footer-image-height);
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Social-Icons nebeneinander anordnen */
+[data-layout="footer"] .socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-self: center;
+    gap: 20px;
+    a {
+        text-decoration: none;
+    }
+}
